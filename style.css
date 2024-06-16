@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+canvas {
+    display: block; /* Remove any default whitespace */
+    background-color: #f0f0f0; /* Light gray background */
+    margin: auto; /* Center the canvas */
+    border: 1px solid #ccc; /* Optional: Add a border */
+}
