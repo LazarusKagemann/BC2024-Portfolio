@@ -10,3 +10,8 @@ canvas {
     margin: auto; /* Center the canvas */
     border: 1px solid #ccc; /* Optional: Add a border */
 }
+
+
+.footer{
+    color: white;
+}
