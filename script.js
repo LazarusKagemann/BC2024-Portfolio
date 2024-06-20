@@ -4,7 +4,7 @@ var ctx = canvas.getContext("2d");
 
 // Images
 var background = new Image();
-background.src = "garage.png";
+background.src = "garagepng.png";
 
 var playerImg = new Image();
 playerImg.src = "player.png"; // Replace with the path to your player image
