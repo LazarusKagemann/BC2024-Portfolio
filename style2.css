@@ -26,11 +26,18 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    min-width: 75vw;
-    max-width: 75vw;
+    min-width: 65vw;
+    max-width: 65vw;
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #E6E6E6;
+    
+}
+.inner-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
