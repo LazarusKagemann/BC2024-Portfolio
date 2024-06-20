@@ -1,0 +1,57 @@
+
+/* The code below puts the title of the website in the center */
+.title { 
+    text-align: center;
+}
+
+/* The code below adds a white background-color and black text color for the body of the page. */
+body {
+    background-image: url("industrial_background.jpg");
+
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: -50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #f0f0f0;
+    list-style-position: inside;
+    
+}
+
+.outer-container {
+    background-color: #141414;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    min-width: 75vw;
+    max-width: 75vw;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #E6E6E6;
+    
+}
+
+.column {
+    background-color: #070707;
+    border: 0px solid darkblue;
+    padding: 100px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+img {
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
