@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+
+<body>
+    <label> form content... </label>
+    <p>Subtext</p>
+    <a href="page2.html">*link text* </a>
+    <canvas id="myCanvas" width="900" height="400"></canvas>
+    <footer>
+        <p>Author: Lazarus Kagemann</p>
+    </footer>
+</body>
+</html> 

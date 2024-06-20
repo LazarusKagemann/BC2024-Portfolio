@@ -6,7 +6,7 @@
 
 /* The code below adds a white background-color and black text color for the body of the page. */
 body {
-    background-image: url("industrial_background.jpg");
+    background-image: url("");
 
     font-family: Arial, sans-serif;
     margin: 0;
@@ -19,6 +19,18 @@ body {
     background-color: #f0f0f0;
     list-style-position: inside;
     
+}
+
+canvas{
+    min-width: 65vw;
+    max-width: 65vw;
+    margin-left: -100px;
+    /* margin-top: -100px; */
+}
+
+.workshoptext{
+    /*margin-right:-100px;*/
+    color: white;
 }
 
 .outer-container {
@@ -60,5 +72,6 @@ img {
     max-width: 100%;
     max-height: 100%;
     height: auto;
-    width: auto\9; /* ie8 */
+    width: auto\9;
+    
 }

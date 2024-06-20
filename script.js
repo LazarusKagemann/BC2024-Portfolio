@@ -39,15 +39,16 @@ var gamePieces = [];
 
 // Start the game
 function startGame() {
-    myGamePiece = new Component(gamePieceImg, 150, 150, 600, 260); // Non-player game piece
-    player = new PlayerComponent(playerImg, 150, 150, 250, 260); // Player-controlled image
+    myGamePiece = new Component(gamePieceImg, 200, 200, 700, 260); // Non-player game piece
+    player = new PlayerComponent(playerImg, 200, 200, 250, 260); // Player-controlled image
     
     // Example of adding multiple game pieces
-    gamePieces.push(new Component(gamePieceImg, 150, 150, 110, 260));
+    // gamePieces.push(new Component(gamePieceImg, 150, 150, 100, 260));
     
     // Set collision callback for player
     player.onCollision = function() {
         // Handle collision with specific game piece (e.g., redirect to another page)
+        // window.location.assign("page2.html");
         console.log("Player collided with special game piece!");
         //window.location.href = "page2.html";
 
