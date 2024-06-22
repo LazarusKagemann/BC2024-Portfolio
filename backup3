@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unit 2 Starter Code, Option 1</title>
+  <link href="style2.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="lazerbrick.jpg">
+</head>
+<script defer src="script2.js"></script>
+
+<body>
+  
+  <div class="outer-container">
+
+    <img src="gameplay.gif">
+    <div class="container">
+      <nav>
+        <button onclick="location.href='#about'">Projects</button>
+        <button onclick="location.href='#services'">About</button>
+        <button onclick="location.href='#contact'">Blog</button>
+      </nav>
+    </div>
+    <div class="container">
+
+        <div class="column">
+          <h2>Lazarus Kagemann</h2>
+          <p>lorem ispum blah blah blah blah</p>
+        </div>
+
+        <div class="column">
+          <h2>lorem ispum</h2>
+          <p>lorem ispum</p>          
+        </div>
+        <div class="column" id="services">
+          <img src="">
+          <h2>Untitled</h2>
+            <p>lorem ispum</p>
+        </div>
+
+        <div class="column">
+          <img src="">
+          <h2>Untitled</h2>
+          <p></p>
+        </div>
+
+    </div>
+  </div>
+</body>
+        
+</html>
+
+
+
+
+
+/* The code below puts the title of the website in the center */
+.title { 
+    text-align: center;
+}
+
+/* The code below adds a white background-color and black text color for the body of the page. */
+body {
+    background-image: url("");
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffe375;
+    background-color: #261c19;
+    list-style-position: inside;
+}
+
+canvas {
+    min-width: 65vw;
+    max-width: 65vw;
+    margin-left: -100px;
+    /* margin-top: -100px; */
+}
+
+.outer-container {
+    background-color: #141414;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 65vw;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #ffe375;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #E6E6E6;
+}
+
+.column {
+    background-color: #1c1411;
+    border: 0px solid darkblue;
+    padding: 100px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto\9;
+}
+
+/* Styles for the header image */
+.header-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0; /* Ensure no margin */
+}
+
+/* Styles for the navigation bar and buttons */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+nav button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Added border-radius for rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+nav button:hover {
+    background-color: #45a049; /* Darker green */
+}

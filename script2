@@ -1,0 +1,4 @@
+document.addEventListener('scroll', function() {
+    document.body.style.backgroundColor = 'blue'; // Simple test color change
+    console.log('Scroll event detected'); // Debug log
+});
