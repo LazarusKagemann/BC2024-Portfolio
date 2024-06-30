@@ -1,33 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Unit 2 Starter Code, Option 1</title>
-  <link href="style2.css" rel="stylesheet" type="text/css" />
+  <link href="style2.css" rel="stylesheet" type="text/css">
   <link rel="icon" type="image/x-icon" href="lazerbrick.jpg">
   <script defer src="script2.js"></script>
 </head>
-
 <body>
-  <div class="main">
+  <header>
     <div class="banner">
-    <img src="sneakpeek.gif"></div>
-    <p class="overlay-text">Lazarus Kagemann</p>
+      <img src="sneakpeek.gif" alt="Banner Image">
+      <p class="overlay-text">Lazarus Kagemann</p>
+    </div>
     <nav class="navbar">
       <button onclick="location.href='#about'">Projects</button>
       <button onclick="location.href='#services'">About</button>
       <button onclick="location.href='#contact'">Blog</button>
     </nav>
-
+  </header>
+  
+  <main class="main">
     <div class="flex-container">
-      <div class="container-1"><img src="me.jpg"></div>
+      <div class="container-1">
+        <img src="me.jpg" alt="Image of Lazarus Kagemann">
+      </div>
       <div class="container-2">
         <h3>About</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris a diam maecenas sed enim ut sem. In massa tempor nec feugiat nisl pretium fusce id velit. Viverra aliquet eget sit amet tellus cras adipiscing enim eu. At imperdiet dui accumsan sit amet nulla. Ipsum faucibus vitae aliquet nec ullamcorper sit amet. Dapibus ultrices in iaculis nunc sed. Imperdiet proin fermentum leo vel orci. Mauris a diam maecenas sed enim. Lobortis feugiat vivamus at augue eget arcu dictum varius duis.
-        </p>
-
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris a diam maecenas sed enim ut sem. In massa tempor nec feugiat nisl pretium fusce id velit. Viverra aliquet eget sit amet tellus cras adipiscing enim eu. At imperdiet dui accumsan sit amet nulla. Ipsum faucibus vitae aliquet nec ullamcorper sit amet. Dapibus ultrices in iaculis nunc sed. Imperdiet proin fermentum leo vel orci. Mauris a diam maecenas sed enim. Lobortis feugiat vivamus at augue eget arcu dictum varius duis.</p>
         <div class="c2footer">
-          <a href="https://www.linkedin.com/in/lazaruskagemann/" target="_blank" rel="noopener noreferrer"><img border="0" alt="linkedin_link" src="logo_linkedin.png"></a>
-          <a href="mailto:“lazaruskagemann@gmail.com" target="_blank" rel="noopener noreferrer"><img border="0" alt="gmail_link" src="logo_gmail.png"></a>
+          <a href="https://www.linkedin.com/in/lazaruskagemann/" target="_blank" rel="noopener noreferrer">
+            <img src="logo_linkedin.png" alt="LinkedIn Profile">
+          </a>
+          <a href="mailto:lazaruskagemann@gmail.com" target="_blank" rel="noopener noreferrer">
+            <img src="logo_gmail.png" alt="Gmail Link">
+          </a>
         </div>
       </div>
     </div>
@@ -35,41 +43,49 @@
     <!-- Gallery Section -->
     <section class="gallery">
       <div class="image">
-        <img src="dog1.jpg" alt="Image 1">
+        <img src="gallery_waste_01.jpeg" alt="Post-apocalyptic Game">
+        <div class="image-name">Post-apocalyptic Game</div>
       </div>
       <div class="image">
-        <img src="zlim.png" alt="Image 2">
+        <img src="zlim.png" alt="YouTube Logo">
+        <div class="image-name">YouTube Logo</div>
       </div>
       <div class="image">
-        <img src="gallery_dark_matter.png" alt="Image 3">
+        <img src="gallery_dark_matter.png" alt="Sci-fi Game">
+        <div class="image-name">Sci-fi Game</div>
       </div>
       <div class="image">
-        <img src="dog2.jpg" alt="Image 3">
+        <img src="gallery_nomad.png" alt="Text">
+        <div class="image-name">Text</div>
       </div>
       <div class="image">
-        <img src="heart.jpg" alt="Image 3">
+        <img src="heart.jpg" alt="LEGO Heart">
+        <div class="image-name">LEGO Heart</div>
       </div>
       <div class="image">
-        <img src="shirt.jpg" alt="Image 3">
+        <img src="pendant.png" alt="Pendant Model">
+        <div class="image-name">Pendant Model</div>
       </div>
       <!-- Add more images as needed -->
     </section>
-    <div class="footer">
-      
-      <div class = "newsletter">
+    
+    <footer class="footer">
+      <div class="newsletter">
         <h3>Newsletter:</h3>
-      <form action="/action_page.php">
-        
-        <input type="text" id="fname" name="fname" value="First Name"><br>
-        <input type="text" id="lname" name="lname" value="Last Name"><br><br>
-        <input type="submit" value="Submit">
-      </form></div>
-      <a href="https://www.linkedin.com/in/lazaruskagemann/" target="_blank" rel="noopener noreferrer"><img border="0" alt="linkedin_link" src="linkedinlazarus.png"></a>
-      
-    </div>
-  </div>
-
-  <button type="button" class="btn1"><img src="btn_accessibility.png" alt="Image 3"></button>
-
+        <form action="/action_page.php">
+          <input type="text" id="fname" name="fname" value="First Name"><br>
+          <input type="text" id="lname" name="lname" value="Last Name"><br><br>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      <a href="https://www.linkedin.com/in/lazaruskagemann/" target="_blank" rel="noopener noreferrer">
+        <img src="linkedinlazarus.png" alt="LinkedIn Profile">
+      </a>
+    </footer>
+  </main>
+  
+  <button type="button" class="btn1">
+    <img src="btn_accessibility.png" alt="Accessibility Button">
+  </button>
 </body>
 </html>
