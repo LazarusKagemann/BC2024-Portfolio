@@ -1,0 +1,74 @@
+
+  
+  /* Blog post list styles */
+  .post-summary {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .post-summary h2 {
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .post-summary img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .post-summary p {
+    color: #666;
+  }
+  
+  .post-summary a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #4CAF50;
+  }
+  
+  .post-summary a:hover {
+    text-decoration: underline;
+  }
+  
+ /* Post styles */
+.post {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f9f9f9; /* Default background color for posts */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .post-title {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .post-meta {
+    font-size: 0.8em;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .post-content {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.8;
+  }
+  
+  .post-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  /* Specific background color for every alternate post */
+  .post:nth-child(even) {
+    background-color: #e9e9e9;
+  }

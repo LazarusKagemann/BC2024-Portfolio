@@ -14,15 +14,14 @@
       <img src="sneakpeek.gif" alt="Banner Image">
       <p class="overlay-text">Lazarus Kagemann</p>
     </div>
-    <nav class="navbar">
-      <button onclick="location.href='#about'">Projects</button>
-      <button onclick="location.href='#services'">About</button>
-      <button onclick="location.href='#contact'">Blog</button>
-    </nav>
   </header>
-  
+  <nav class="navbar">
+    <button onclick="location.href='page2.html'">Projects</button>
+    <button onclick="location.href='page2.html'">About</button>
+    <button onclick="location.href='page_blog_list.html'">Blog</button>
+  </nav>
   <main class="main">
-    <div class="flex-container">
+    <div id="about" class="flex-container">
       <div class="container-1">
         <img src="me.jpg" alt="Image of Lazarus Kagemann">
       </div>
@@ -43,28 +42,17 @@
     <!-- Gallery Section -->
     <section class="gallery">
       <div class="image">
-        <img src="gallery_waste_01.jpeg" alt="Post-apocalyptic Game">
-        <div class="image-name">Post-apocalyptic Game</div>
+        <img src="gallery_nomad.png" alt="Post-apocalyptic Game">
+        <div class="image-name">Coding Projects</div>
       </div>
       <div class="image">
-        <img src="zlim.png" alt="YouTube Logo">
-        <div class="image-name">YouTube Logo</div>
+        <img src="gallery_dark_matter.png" alt="YouTube Logo">
+        <div class="image-name">Video Games</div>
       </div>
       <div class="image">
-        <img src="gallery_dark_matter.png" alt="Sci-fi Game">
-        <div class="image-name">Sci-fi Game</div>
+        <img src="zlimhead.png" alt="Sci-fi Game">
+        <div class="image-name">Art</div>
       </div>
-      <div class="image">
-        <img src="gallery_nomad.png" alt="Text">
-        <div class="image-name">Text</div>
-      </div>
-      <div class="image">
-        <img src="heart.jpg" alt="LEGO Heart">
-        <div class="image-name">LEGO Heart</div>
-      </div>
-      <div class="image">
-        <img src="pendant.png" alt="Pendant Model">
-        <div class="image-name">Pendant Model</div>
       </div>
       <!-- Add more images as needed -->
     </section>
@@ -74,7 +62,8 @@
         <h3>Newsletter:</h3>
         <form action="/action_page.php">
           <input type="text" id="fname" name="fname" value="First Name"><br>
-          <input type="text" id="lname" name="lname" value="Last Name"><br><br>
+          <input type="text" id="lname" name="lname" value="Last Name"><br>
+          <input type="text" id="email" name="email" value="Email"><br><br>
           <input type="submit" value="Submit">
         </form>
       </div>

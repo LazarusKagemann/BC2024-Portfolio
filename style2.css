@@ -1,4 +1,4 @@
-/* Variables */
+
 :root {
     --primary-color: #ffe375;
     --secondary-color: slategray;
@@ -8,7 +8,7 @@
     --font-size: 22px;
   }
   
-  /* General Styles */
+
   body {
     margin: 0;
     padding: 0;
@@ -28,26 +28,26 @@
     flex-direction: column;
     align-items: center;
     transition: margin-top 0.2s ease-in-out; /* Smooth transition for margin */
+    min-height: 110vh;
   }
   
   .main.scrolled {
     margin-top: 80px; /* Height of the navbar */
   }
   
-  /* Banner Styles */
   .banner {
     width: 100vw; /* Full viewport width */
     height: 100vh; /* Full viewport height */
-    overflow: hidden; 
+    overflow: hidden;
     position: relative;
-    transition: height 0.9s ease-in-out, opacity 0.5s ease-in-out; /* Adjust transition speed */
+    transition: transform 0.3s ease-in-out; /* Add transition for smooth animation */
   }
   
   .banner.hidden {
-    height: 0; /* Height when scrolled */
-    opacity: 0;
-    visibility: hidden;
+    transform: translateY(-100%); /* Move banner out of view when hidden */
   }
+  
+  
   
   .banner img {
     width: 100%;
@@ -70,25 +70,29 @@
     border-radius: 5px;
     white-space: nowrap;
     transition: opacity 0.2s ease-in-out; /* Adjust transition speed */
-    z-index: 2; /* Higher z-index */
+    z-index: 2; 
   }
   
+header {
+  background-color: var(--navbar-background);
+
+}
+
   .overlay-text.hidden {
-    opacity: 0; /* Hide text */
+    opacity: 0; 
   }
   
-  /* Navbar Styles */
-  .navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: var(--navbar-background);
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-  }
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--navbar-background);
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 0.5;
+}
   
   nav button {
     padding: 10px 20px;
@@ -106,7 +110,7 @@
     background-color: #45a049;
   }
   
-  /* Flex Container Styles */
+ 
   .flex-container {
     display: flex;
     width: 100%;
@@ -147,7 +151,6 @@
     display: inline-block;
   }
   
-  /* Gallery Styles */
   .gallery {
     display: grid;
     grid-template-columns: repeat(3, minmax(250px, 1fr));
@@ -167,12 +170,11 @@
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.3s ease, filter 0.3s ease;
   }
   
   .image:hover img {
     transform: scale(1.1);
-    filter: brightness(50%);
+    
   }
   
   .image-name {
@@ -183,18 +185,18 @@
     background: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 5px 10px;
-    font-size: 24px;
+    font-size: 32px;
     border-radius: 5px;
     white-space: nowrap;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
   
   .image:hover .image-name {
-    opacity: 1;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.2);
   }
   
-  /* Footer Styles */
+
   .footer {
     display: flex;
     width: 100%;
@@ -213,7 +215,7 @@
     border-radius: 10px;
   }
   
-  /* Newsletter Styles */
+
   .newsletter {
     background-color: var(--gallery-background);
     border-radius: 15px;
@@ -221,7 +223,6 @@
     padding: 10px;
     width: 50%;
     height: auto;
-    box-shadow: 4px 4px 1px darkslategray;
   }
   
   .newsletter input[type=text] {
@@ -230,7 +231,6 @@
     box-sizing: border-box;
   }
   
-  /* Button Styles */
   .btn1 {
     right: 0;
     margin-right: 50px;
@@ -244,5 +244,6 @@
   .btn1 img {
     width: 75px;
     height: 75px;
+    z-index: 1;
   }
   
