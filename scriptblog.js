@@ -33,9 +33,9 @@ function fetchBlogPosts() {
     postElement.innerHTML = `
       <h2>${post.title}</h2>
       <img src="${post.image}" alt="${post.title} Image">
+
       <p>${post.content.substring(0, 100)}...</p>
-      <a href="page_blog_post.html?key=${post.key}">Read More</a>
-    `;
+      <a href="page_blog_post.html?key=${post.key}">Read More</a>`;
     return postElement;
   }
   
