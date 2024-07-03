@@ -1,255 +1,279 @@
-
 :root {
-    --primary-color: #ffe375;
-    --secondary-color: slategray;
-    --background-color: white;
-    --navbar-background: lightslategray;
-    --gallery-background: aliceblue;
-    --font-size: 22px;
-  }
-  
-
-  body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--primary-color);
-    background-color: var(--background-color);
-    scroll-behavior: smooth;
-
-  }
-  
-  .main {
-    background-color: var(--secondary-color);
-    color: black;
-    width: 70%;
-    max-width: 1280px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: margin-top 0.2s ease-in-out; /* Smooth transition for margin */
-    min-height: 110vh;
-  }
-  
-  .main.scrolled {
-    margin-top: 80px; /* Height of the navbar */
-  }
-  
-  .banner {
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.3s ease-in-out; /* Add transition for smooth animation */
-  }
-  
-  .banner.hidden {
-    transform: translateY(-100%); /* Move banner out of view when hidden */
-  }
-  
-  
-  
-  .banner img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-  }
-  
-  .overlay-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 100px;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-    white-space: nowrap;
-    transition: opacity 0.2s ease-in-out; /* Adjust transition speed */
-    z-index: 2; 
-  }
-  
-header {
-  background-color: var(--navbar-background);
-
+  --primary-color: #ffe375;
+  --secondary-color: slategray;
+  --background-color: white;
+  --navbar-background: lightslategray;
+  --gallery-background: lightgray;
+  --font-size: 22px;
 }
 
-  .overlay-text.hidden {
-    opacity: 0; 
-  }
-  
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--primary-color);
+  background-color: var(--background-color);
+  scroll-behavior: smooth;
+  font-family: 'Atkinson Hyperlegible';
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.main {
+  background-color: var(--secondary-color);
+  color: black;
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: margin-top 0.2s ease-in-out; /* Smooth transition for margin */
+  min-height: 110vh;
+  scroll-snap-type: y mandatory;
+  overflow: hidden; /* Prevent vertical overflow */
+}
+
+.banner {
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out, height 0.3s ease-in-out; /* Add transition for smooth animation */
+  z-index: 1; /* Ensure banner is behind the navbar */
+}
+
+.banner.hidden {
+  transform: translateY(-100%); /* Move banner out of view when hidden */
+  height: 0;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  max-width: 100%; /* Ensure image does not exceed 100% width */
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 100px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  white-space: nowrap;
+  transition: opacity 0.2s ease-in-out; /* Adjust transition speed */
+  z-index: 2;
+}
+
+header {
+  background-color: var(--navbar-background);
+}
+
+.overlay-text.hidden {
+  opacity: 0;
+}
+
 .navbar {
   display: flex;
   flex-direction: row;
   justify-content: center;
   background-color: var(--navbar-background);
-  position: -webkit-sticky; 
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   width: 100%;
-  z-index: 0.5;
+  z-index: 3; /* Ensure navbar is above the banner and gallery images */
+  margin: 0; /* Ensure no margin at the top */
+  padding: 0; /* Ensure no padding at the top */
 }
-  
-  nav button {
-    padding: 10px 20px;
-    background-color: var(--navbar-background);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    color: white;
-    border: none;
-    border-radius: 2.5px;
-    cursor: pointer;
-    font-size: 24px;
-    margin: 0 2.5px;
-  }
-  
-  nav button:hover {
-    background-color: #45a049;
-  }
-  
- 
-  .flex-container {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    background-color: lightgray;
-    height: 350px;
-  }
-  
-  .container-1, .container-2 {
-    flex: 1;
-    font-size: var(--font-size);
-  }
-  
-  .container-1 {
-    max-width: 350px;
-  }
-  
-  .container-1 img {
-    width: 100%;
-    height: auto;
-    max-width: 350px;
-    display: block;
-  }
-  
-  .container-2 {
-    padding: 1vw;
-    align-items: center;
-  }
-  
-  .container-2 .c2footer img {
-    height: 25px;
-    width: auto;
-    padding: 2px;
-  }
-  
-  .c2footer {
-    translate: 0 -10px;
-    display: inline-block;
-  }
-  
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(250px, 1fr));
-    gap: 10px;
-    width: 100%;
-    height: auto;
-    background-color: var(--gallery-background);
-    
-  }
-  
-  .image {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  
-  .image:hover img {
-    transform: scale(1.1);
-    
-  }
-  
-  .image-name {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 5px 10px;
-    font-size: 32px;
-    border-radius: 5px;
-    white-space: nowrap;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-  
-  .image:hover .image-name {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(1.2);
-  }
-  
 
-  .footer {
-    display: flex;
-    width: 100%;
-    height: 250px;
-    justify-content: space-between;
-    background-color: lightgray;
-    border-radius: 2.5px;
-    margin-top: 50px;
-  }
-  
-  .footer img {
-    width: 250px;
-    height: auto;
-    margin-right: 20px;
-    border-radius: 10px;
-  }
-  
+nav button {
+  padding: 10px 20px;
+  background-color: var(--navbar-background);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 2.5px;
+  cursor: pointer;
+  font-size: 24px;
+  margin: 0 2.5px;
+}
 
-  .newsletter {
-    background-color: var(--gallery-background);
-    border-radius: 15px;
-    /* margin: 5px; */
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-    width: 50%;
-    height: auto;
-  }
-  
+nav button:hover {
+  background-color: #45a049;
+}
 
-  .newsletter input[type=text] {
-    width: 100%;
-    margin: 8px 0;
-    box-sizing: border-box;
-  }
-  
-  .btn1 {
-    right: 0;
-    margin-right: 50px;
-    margin-bottom: 25px;
-    position: fixed;
-    bottom: 0;
-    border: none;
-    background-color: transparent;
-  }
-  
-  .btn1 img {
-    width: 75px;
-    height: 75px;
-    z-index: 1;
-  }
-  
-  
+.toggle-banner-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4; /* Ensure the button is above the navbar */
+}
+
+.toggle-banner-btn:hover {
+  background-color: #45a049;
+}
+
+.flex-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: lightgray;
+  height: 350px;
+}
+
+.container-1, .container-2 {
+  flex: 1;
+  font-size: var(--font-size);
+}
+
+.container-1 {
+  max-width: 350px;
+}
+
+.container-1 img {
+  width: 100%;
+  height: auto;
+  max-width: 350px;
+  display: block;
+}
+
+.container-2 {
+  padding: 1vw;
+  align-items: center;
+}
+
+.container-2 .c2footer img {
+  height: 25px;
+  width: auto;
+  padding: 2px;
+}
+
+.c2footer {
+  translate: 0 -10px;
+  display: inline-block;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--gallery-background);
+  z-index: 2; /* Ensure gallery is behind the navbar */
+}
+
+.image {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image:hover img {
+  transform: scale(1.1);
+}
+
+.image-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  font-size: 32px;
+  border-radius: 5px;
+  white-space: nowrap;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.image:hover .image-name {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+  height: 250px;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 2.5px;
+  margin-top: 50px;
+}
+
+.footer img {
+  width: 250px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.newsletter {
+  background-color: var(--gallery-background);
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  width: 50%;
+  height: auto;
+}
+
+.newsletter input[type=text] {
+  width: 100%;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.btn1 {
+  right: 0;
+  margin-right: 50px;
+  margin-bottom: 25px;
+  position: fixed;
+  bottom: 0;
+  border: none;
+  background-color: transparent;
+  z-index: 4; /* Ensure the button is above the navbar */
+}
+
+.btn1 img {
+  width: 75px;
+  height: 75px;
+  z-index: 4; /* Ensure the image is above the navbar */
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  border: 1px solid black;
+  box-sizing: border-box;
+  border: hidden;
+}
