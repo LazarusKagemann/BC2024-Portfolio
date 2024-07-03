@@ -4,7 +4,7 @@
     --secondary-color: slategray;
     --background-color: white;
     --navbar-background: lightslategray;
-    --gallery-background: aliceblue;
+    --gallery-background: lightgray;
     --font-size: 22px;
   }
   
@@ -18,6 +18,7 @@
     color: var(--primary-color);
     background-color: var(--background-color);
     scroll-behavior: smooth;
+    font-family: 'Atkinson Hyperlegible';
 
   }
   
@@ -31,6 +32,7 @@
     align-items: center;
     transition: margin-top 0.2s ease-in-out; /* Smooth transition for margin */
     min-height: 110vh;
+    scroll-snap-type: y mandatory;
   }
   
   .main.scrolled {
@@ -59,6 +61,7 @@
   }
   
   .overlay-text {
+    
     position: absolute;
     top: 50%;
     left: 50%;
@@ -80,9 +83,9 @@ header {
 
 }
 
-  .overlay-text.hidden {
-    opacity: 0; 
-  }
+.overlay-text.hidden {
+  opacity: 0; 
+}
   
 .navbar {
   display: flex;
@@ -155,10 +158,10 @@ header {
   
   .gallery {
     display: grid;
-    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
     gap: 10px;
     width: 100%;
-    height: auto;
+    height: 100%;
     background-color: var(--gallery-background);
     
   }
@@ -166,11 +169,12 @@ header {
   .image {
     position: relative;
     overflow: hidden;
+    
   }
   
   .image img {
-    width: 100%;
-    height: 100%;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
     display: block;
   }
@@ -205,7 +209,7 @@ header {
     width: 100%;
     height: 250px;
     justify-content: space-between;
-    background-color: lightgray;
+    background-color: white;
     border-radius: 2.5px;
     margin-top: 50px;
   }
@@ -252,3 +256,13 @@ header {
     z-index: 1;
   }
   
+  .snap-section {
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    border: 1px solid black;
+    box-sizing: border-box;
+    border: hidden;
+  }
