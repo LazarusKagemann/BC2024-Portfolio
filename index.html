@@ -1,27 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Unit 2 Starter Code, Option 1</title>
-  <link href="style2.css" rel="stylesheet" type="text/css" />
-  <link rel="icon" type="image/x-icon" href="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lazarus Kagemann - Portfolio</title>
+  <link href="style2.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/x-icon" href="lazer.jpg">
+  <script defer src="script2.js"></script>
 </head>
-<script defer src="script.js"></script>
-
 <body>
-  <div class="outer-container">
-    <div class="container">
-        <div class="column">
-          <canvas id="myCanvas" width="1080" height="540"></canvas>
-          <p class="workshoptext"></p>
-        </div>
-
+  <header>
+    <div class="banner">
+      <img src="sneakpeek.gif" alt="Banner Image">
+      <p class="overlay-text">Lazarus Kagemann</p>
     </div>
-</div>
-</body>
-        
+    <button class="toggle-banner-btn" id="toggleBannerBtn">−</button>
+  </header>
+  <nav class="navbar">
+    <button onclick="location.href='#section2'">Projects</button>
+    <button onclick="location.href='#section1'">About</button>
+    <button onclick="location.href='#section3'">Contact</button>
+  </nav>
+  
+  <main class="main">
+    <div class="linebreak-double"></div>
+
+    <section id="section1" class="snap-section">
+      <div id="about" class="flex-container">
+        <div class="container-1">
+          <img src="me.jpg" alt="Image of Lazarus Kagemann">
+        </div>
+        <div class="container-2">
+          <h3>About</h3>
+          <p>Programmer, multi-media artist, and video game developer. I strive to create engaging and meaningful solutions.</p>
+          <div class="c2footer">
+            <a href="https://www.linkedin.com/in/lazaruskagemann/" target="_blank" rel="noopener noreferrer">
+              <img src="logo_linkedin.png" alt="LinkedIn Profile">
+            </a>
+            <a href="mailto:lazaruskagemann@gmail.com" target="_blank" rel="noopener noreferrer">
+              <img src="logo_gmail.png" alt="Gmail Link">
+            </a>
+          </div>
+        </div>
       </div>
+    </section>
 
-</html>
-    </body>
+    <div class="linebreak-double"></div>
+    
+    <section id="section2" class="snap-section">
+      <section class="gallery">
+        <div class="image">
+          <a href="page_projects_coding.html" target="_blank" rel="noopener noreferrer">
+            <img src="gallery_nomad.png" alt="LinkedIn Profile">
+            <div class="image-name">Coding Projects</div>
+          </a>
+        </div>
+        <div class="image">
+          <a href="https://www.linkedin.com/in/lazaruskagemann/" target="_blank" rel="noopener noreferrer">
+            <img src="gallery_dark_matter.png" alt="LinkedIn Profile">
+            <div class="image-name">Video Games</div>
+          </a>
+        </div>
+        <div class="image">
+          <a href="page_projects_art.html" target="_blank" rel="noopener noreferrer">
+            <img src="zlimhead.png" alt="art_page">
+            <div class="image-name">Art</div>
+          </a>
+        </div>
+      </section>
+    </section>
 
+    <div class="linebreak-double"></div>
+
+    <section id="section3" class="snap-section">
+      <div class="contact">
+        <div class="newsletter">
+          <h3>Newsletter:</h3>
+          <form action="/action_page.php">
+            <input type="text" id="fname" name="fname" value="First Name"><br>
+            <input type="text" id="lname" name="lname" value="Last Name"><br>
+            <input type="text" id="email" name="email" value="Email"><br><br>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+        <a href="https://www.linkedin.com/in/lazaruskagemann/" target="_blank" rel="noopener noreferrer">
+          <img src="linkedinlazarus.png" alt="LinkedIn Profile">
+        </a>
+      </div>
+    </section>
+
+    <div class="linebreak"></div>
+  </main>
+
+  <footer>
+    <p>© Lazarus Kagemann 2024</p>
+    <p><a href="page_credits.html" target="_blank" rel="noopener noreferrer">Credits</a></p>
+    <p><a href="https://www.linkedin.com/in/lazaruskagemann/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+  </footer>
+  
+  <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+
+</body>
 </html>
